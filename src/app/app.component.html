@@ -1,0 +1,9 @@
+<my-example-table
+  [examples]="examples | async"
+  [pending]="pending | async"
+  [sticky]="sticky"
+></my-example-table>
+
+<button mat-raised-button color="primary" (click)="fetch()">Fake fetch</button>
+<mat-checkbox #chk color="primary" (change)="sticky = chk.checked">Sticky</mat-checkbox>
+<p>Delay: {{ delay / 1000 }}s</p>
